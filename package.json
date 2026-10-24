@@ -1,9 +1,0 @@
-{
-  "name": "weather-shifts-nature-drifts",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Interactive environmental learning hub",
-  "scripts": {
-    "start": "node server.js"
-  }
-}
