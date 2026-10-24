@@ -1,0 +1,30 @@
+/* Complete dark-theme surfaces for the learning hub and its topic pages. */
+body.night{color-scheme:dark;background:#071923;color:#e2eef4}
+.night .content,.night .topic-page{background:#071923}
+.night .section-title h2,.night .panel h2,.night .learn-heading h2,.night .topic-content>h2,.night .references-section h2{color:#e4f6f1}
+.night .learn{background:#0b2731;border-color:#1c4551}
+.night .learn-heading>p:last-child,.night .article p,.night .date,.night .trending small,.night .game-stage>p,.night .fact span,.night .references-section p:not(.eyebrow),.night .reference-link small{color:#afcbd7}
+.night .article,.night .panel,.night .progress-card,.night .game-stage,.night .fact,.night .references-section,.night .reference-link,.night .mission-card{background:#102d39;border-color:#27505c;color:#e2eef4;box-shadow:none}
+.night .panel{background:linear-gradient(130deg,#102d39,#0c2530)}
+.night .article h3,.night .game-stage h3,.night .match-card{color:#e2f6f1}
+.night .trending li{border-color:#28505c}
+.night .game-tabs button{background:#102d39;border-color:#315d68;color:#d9f0f2}
+.night .game-tabs .selected{background:#4ce4b0;border-color:#4ce4b0;color:#042d36}
+.night .game-actions button,.night .answer{background:#123744;border-color:#315d68;color:#e4f6f1}
+.night .game-actions button:hover,.night .answer:hover{background:#1d685b}
+.night .match-card{background:#123744;border-color:#315d68}
+.night .match-card.done,.night .answer.correct{background:#1b7153;border-color:#51c88b;color:#f2fffb}
+.night .answer.wrong{background:#713c46;border-color:#dd7685;color:#fff4f4}
+.night .review>div{background:#123744}
+.night .review span{color:#b7d3dc}
+.night .progress-track{background:#214752}
+.night .mission-card{border-color:#3e7e70}
+.night .mission-badge{color:#73f3ba}
+.night .mission-card button{background:#1e4d4a;color:#aaf8d0}
+.night .timer{background:#164c43;color:#91f8c4}
+.night .references-toggle{background:#48dca8;color:#052f36}
+.night .reference-link:hover{background:#173e47;border-color:#5ae3b0}
+.night .sprint-action{background:linear-gradient(135deg,#123f48,#15334a);color:#e8faf7}
+.night .sprint-buttons button:last-child{background:#315d68;color:#edf8f8}
+.night .sprint-score{background:#123b40}
+.night .sprint-score span{color:#c3dce1}
