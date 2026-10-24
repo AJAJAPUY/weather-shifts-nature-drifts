@@ -10,12 +10,13 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2300223a'/%3E%3Cpath d='M32 54C11 44 10 21 28 12c-1 11 4 16 4 16 4-12 15-15 23-14-2 20-9 34-23 40Z' fill='%2358ed92'/%3E%3Cpath d='M20 41c10-7 17-14 25-25M30 32l-1-12M35 27l11-2' stroke='%2300223a' stroke-width='3' fill='none'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="enhancements.css" />
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="#home" aria-label="Weather Shifts home"><span class="mark">🍃</span><span>WEATHER SHIFTS,<strong>NATURE DRIFTS</strong></span></a>
+    <a class="brand" href="index.html" aria-label="Weather Shifts home"><span class="mark">🍃</span><span>WEATHER SHIFTS,<strong>NATURE DRIFTS</strong></span></a>
     <button class="menu-toggle" aria-label="Open menu">☰</button>
-    <nav><a class="active" href="#home">Home</a><a href="#articles">Climate Change</a><a href="#articles">Biodiversity</a><a href="#articles">Environmental Science</a><a href="#articles">Sustainability</a><a href="#articles">Technology</a><a href="#about">About</a></nav>
+    <nav><a class="active" href="index.html">Home</a><a href="climate-change.html">Climate Change</a><a href="biodiversity.html">Biodiversity</a><a href="environmental-science.html">Environmental Science</a><a href="sustainability.html">Sustainability</a><a href="technology.html">Technology</a><a href="about.html">About</a></nav>
     <div class="header-icons"><button aria-label="Search">⌕</button><button id="themeToggle" aria-label="Toggle theme">◐</button></div>
   </header>
 
@@ -39,6 +40,7 @@
     <section class="learn" id="learn">
       <div class="learn-heading"><p class="eyebrow">LEARN BY PLAYING</p><h2>Build your climate confidence</h2><p>Pick an activity, test what you know, and keep your learning streak alive.</p></div>
       <div class="progress-card"><div><small>YOUR LEARNING PATH</small><b id="progressText">0 / 10 answers reviewed</b></div><div class="progress-track"><i id="progressBar"></i></div><strong id="streak">🔥 0 day streak</strong></div>
+      <div class="mission-card"><span class="mission-badge">TODAY'S MISSION</span><p id="missionText">Answer 3 questions to complete today’s planet mission.</p><button id="resetProgress" type="button">Reset my progress</button></div>
       <div class="game-tabs" role="tablist"><button class="selected" data-game="flashcards">Flashcards</button><button data-game="quiz">Quick Quiz</button><button data-game="truefalse">True / False</button><button data-game="matching">Match It</button><button data-game="timed">Timed Challenge</button></div>
       <div class="game-stage" id="gameStage"></div>
     </section>
