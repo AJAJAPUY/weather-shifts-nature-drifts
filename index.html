@@ -11,8 +11,11 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2300223a'/%3E%3Cpath d='M32 54C11 44 10 21 28 12c-1 11 4 16 4 16 4-12 15-15 23-14-2 20-9 34-23 40Z' fill='%2358ed92'/%3E%3Cpath d='M20 41c10-7 17-14 25-25M30 32l-1-12M35 27l11-2' stroke='%2300223a' stroke-width='3' fill='none'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="enhancements.css" />
+  <link rel="stylesheet" href="loading.css" />
+  <link rel="stylesheet" href="game-plus.css" />
 </head>
 <body>
+  <div class="page-loader" id="pageLoader" role="status" aria-label="Loading Weather Shifts, Nature Drifts"><div class="loader-card"><span class="loader-mark">🍃</span><b>WEATHER SHIFTS,<br />NATURE DRIFTS</b><small>Loading your learning journey...</small><span class="loader-line"><i></i></span></div></div>
   <header class="topbar">
     <a class="brand" href="index.html" aria-label="Weather Shifts home"><span class="mark">🍃</span><span>WEATHER SHIFTS,<strong>NATURE DRIFTS</strong></span></a>
     <button class="menu-toggle" aria-label="Open menu">☰</button>
@@ -41,12 +44,13 @@
       <div class="learn-heading"><p class="eyebrow">LEARN BY PLAYING</p><h2>Build your climate confidence</h2><p>Pick an activity, test what you know, and keep your learning streak alive.</p></div>
       <div class="progress-card"><div><small>YOUR LEARNING PATH</small><b id="progressText">0 / 10 answers reviewed</b></div><div class="progress-track"><i id="progressBar"></i></div><strong id="streak">🔥 0 day streak</strong></div>
       <div class="mission-card"><span class="mission-badge">TODAY'S MISSION</span><p id="missionText">Answer 3 questions to complete today’s planet mission.</p><button id="resetProgress" type="button">Reset my progress</button></div>
-      <div class="game-tabs" role="tablist"><button class="selected" data-game="flashcards">Flashcards</button><button data-game="quiz">Quick Quiz</button><button data-game="truefalse">True / False</button><button data-game="matching">Match It</button><button data-game="timed">Timed Challenge</button></div>
+      <div class="game-tabs" role="tablist"><button class="selected" data-game="flashcards">Flashcards</button><button data-game="quiz">Quick Quiz</button><button data-game="truefalse">True / False</button><button data-game="matching">Match It</button><button data-game="timed">Timed Challenge</button><button data-game="sprint">Eco Sprint</button></div>
       <div class="game-stage" id="gameStage"></div>
     </section>
   </main>
 
   <footer id="about"><div class="footer-brand"><span class="mark">🍃</span><div><b>WEATHER SHIFTS,<br /><em>NATURE DRIFTS</em></b><small>Climate / Environment / Our Planet</small></div></div><div><b>EDITORIAL STAFF</b><p>Group Member 1 &nbsp; Writer / Researcher</p><p>Group Member 2 &nbsp; Researcher / Editor</p></div><div><p>Together for a healthier<br />planet tomorrow.</p><div class="socials">●　●　●　●</div></div><small class="copyright">© 2025 Weather Shifts, Nature Drifts. All rights reserved.</small></footer>
   <script src="script.js"></script>
+  <script src="game-plus.js"></script>
 </body>
 </html>

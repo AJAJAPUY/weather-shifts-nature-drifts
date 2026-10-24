@@ -1,3 +1,5 @@
+document.body.insertAdjacentHTML('afterbegin','<div class="page-loader" id="pageLoader" role="status" aria-label="Loading Weather Shifts, Nature Drifts"><div class="loader-card"><span class="loader-mark">🍃</span><b>WEATHER SHIFTS,<br>NATURE DRIFTS</b><small>Loading your learning journey...</small><span class="loader-line"><i></i></span></div></div>');
+setTimeout(()=>document.getElementById('pageLoader')?.classList.add('done'),650);
 const topics={
   climate:{label:'CLIMATE CHANGE',title:'Climate change, clearly explained.',lead:'Explore the science behind a warming world and the choices that shape what happens next.',facts:[['1.2°C','Global temperature rise since pre-industrial times'],['CO₂','The main human-caused warming gas'],['Act now','Every tenth of a degree matters']],steps:['Track your energy use for one week.','Choose a lower-carbon trip when possible.','Share one climate fact from a trusted source.']},
   biodiversity:{label:'BIODIVERSITY',title:'Every species has a place.',lead:'Biodiversity keeps ecosystems resilient, productive, and alive.',facts:[['1M','Species estimated to be at risk'],['Pollinators','Support many crops we eat'],['Habitats','Need protection and restoration']],steps:['Plant native species if you can.','Avoid single-use plastics near waterways.','Learn about one local threatened species.']},
@@ -10,8 +12,16 @@ topics.biodiversity.references=[['UN Environment Programme: Biodiversity','Globa
 topics.science.references=[['U.S. Environmental Protection Agency','Environmental topics, data, and education','https://www.epa.gov/environmental-topics'],['NOAA Education: Climate','Climate science learning resources','https://www.noaa.gov/education/resource-collections/climate']];
 topics.sustainability.references=[['United Nations Sustainable Development Goals','Global sustainability goals and learning','https://sdgs.un.org/goals'],['UN Environment Programme: Sustainable Lifestyles','Practical resource-efficiency guidance','https://www.unep.org/explore-topics/resource-efficiency/what-we-do/sustainable-lifestyles']];
 topics.technology.references=[['NASA Earth Science Data','How Earth observations support research','https://science.nasa.gov/earth-science/earth-science-data/'],['International Energy Agency','Energy technology and clean-energy analysis','https://www.iea.org/topics/technology-innovation']];
+topics.climate.image='https://images.unsplash.com/photo-1517783999520-f068d7431a60?auto=format&fit=crop&w=2200&q=90';
+topics.biodiversity.image='https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?auto=format&fit=crop&w=2200&q=90';
+topics.science.image='https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=2200&q=90';
+topics.sustainability.image='https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=2200&q=90';
+topics.technology.image='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2200&q=90';
 const key=new URLSearchParams(location.search).get('topic')||document.body.dataset.topic||'climate',topic=topics[key]||topics.climate;
 document.title=`${topic.label} | Weather Shifts, Nature Drifts`;
+const hero=document.querySelector('.topic-hero'),topicRoutes={climate:'climate-change.html',biodiversity:'biodiversity.html',science:'environmental-science.html',sustainability:'sustainability.html',technology:'technology.html'};
+hero.style.setProperty('background-image',`linear-gradient(105deg,rgba(0,30,54,.9),rgba(2,64,82,.32)),url('${topic.image}')`,'important');
+document.querySelector(`nav a[href="${topicRoutes[key]}"]`)?.classList.add('active');
 document.querySelector('[data-label]').textContent=topic.label;document.querySelector('[data-title]').textContent=topic.title;document.querySelector('[data-lead]').textContent=topic.lead;
 document.querySelector('#facts').innerHTML=topic.facts.map(f=>`<article class="fact"><strong>${f[0]}</strong><span>${f[1]}</span></article>`).join('');
 document.querySelector('#steps').innerHTML=topic.steps.map((s,i)=>`<li><b>0${i+1}</b>${s}</li>`).join('');
