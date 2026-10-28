@@ -1,3 +1,6 @@
 .site-footer{grid-template-columns:1.25fr 1fr}
+.footer-message{justify-self:center;text-align:center}
+.footer-message p{margin:0 0 14px;line-height:1.35}
+.footer-message .socials{text-align:center}
 @media(max-width:800px){.site-footer{grid-template-columns:1fr 1fr}}
 @media(max-width:540px){.site-footer{grid-template-columns:1fr}}
