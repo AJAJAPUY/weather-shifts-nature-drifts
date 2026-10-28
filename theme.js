@@ -1,6 +1,18 @@
 (() => {
   const storedTheme = localStorage.getItem('wsnd-theme');
   const header = document.querySelector('.topbar');
+  let menuToggle = header?.querySelector('.menu-toggle');
+  let createdMenuToggle = false;
+  if (!menuToggle && header) {
+    menuToggle = document.createElement('button');
+    menuToggle.className = 'menu-toggle';
+    menuToggle.type = 'button';
+    menuToggle.setAttribute('aria-label', 'Open menu');
+    menuToggle.textContent = '☰';
+    header.querySelector('nav')?.before(menuToggle);
+    createdMenuToggle = true;
+  }
+  if (createdMenuToggle) menuToggle?.addEventListener('click', () => header.querySelector('nav')?.classList.toggle('open'));
   let toggle = document.getElementById('themeToggle');
   if (!toggle && header) {
     const controls = document.createElement('div');
